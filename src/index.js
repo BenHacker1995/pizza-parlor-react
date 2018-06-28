@@ -9,12 +9,16 @@ import logger from 'redux-logger'; // Makes development easier
 
 const custReducer = (state = [], action) => {
     if(action.type === 'ADD_CUST') {
-        console.log('in ADD_CUST');
+        state = action.payload;
     }
     return state;
-}
+};
 
+<<<<<<< HEAD
 const cartReducer = (state = {}, action) => {
+=======
+const cartReducer = (state = [], action) => {
+>>>>>>> 4d9d38e5b9285a324dc84df79e2d2e70dff86e47
     if(action.type === 'ADD_ORDER') {
         console.log('in ADD_ORDER');
         
@@ -23,12 +27,16 @@ const cartReducer = (state = {}, action) => {
         
     }
     return state;
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 4d9d38e5b9285a324dc84df79e2d2e70dff86e47
 
 const storeInstance = createStore(
     combineReducers({
-        cartReducer,
-        custReducer
+        custReducer,
+        cartReducer
     }),
     applyMiddleware(logger)
 );
