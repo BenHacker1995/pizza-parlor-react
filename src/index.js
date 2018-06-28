@@ -14,7 +14,7 @@ const custReducer = (state = [], action) => {
     return state;
 }
 
-const cartReducer = (state = {}, action => {
+const cartReducer = (state = {}, action) => {
     if(action.type === 'ADD_ORDER') {
         console.log('in ADD_ORDER');
         
@@ -23,7 +23,7 @@ const cartReducer = (state = {}, action => {
         
     }
     return state;
-})
+}
 
 const storeInstance = createStore(
     combineReducers({
