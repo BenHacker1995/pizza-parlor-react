@@ -5,7 +5,9 @@ import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import Select from '../Select/Select';
 import Customer from '../Customer/Customer';
 
-
+const mapReduxStateToProps = (reduxStore) => ({
+  reduxStore
+})
 class App extends Component {
   render() {
     return (
@@ -19,13 +21,17 @@ class App extends Component {
         <img src="images/pizza_photo.png" alt=""/>
         <p>Pizza is great.</p>
         <Select />
+        
         <Router>
+        <div>
           <Route exact path='/customer' component={Customer} />
           <Link to ='/customer'> Customer Page </Link>
+          </div>
         </Router>
+        
       </div>
     );
   }
 }
 
-export default connect()(App);
+export default connect(mapReduxStateToProps)(App);

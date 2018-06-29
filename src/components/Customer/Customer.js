@@ -88,13 +88,13 @@ class Customer extends Component {
             <div>
                 <h3>Step 2: Customer Information</h3>
                 <form onSubmit={this.handleForm}>
-                    <div class='left'>
+                    <div className='left'>
                     <input onChange={this.handleChangeName} type='text' value={this.state.name} autoComplete='name' placeholder='Name'/>
                     <input onChange={this.handleChangeStreet} type='text' value={this.state.street_address} autoComplete='streetAddress' placeholder='Street Address'/>
                     <input onChange={this.handleChangeCity} type='text' value={this.state.city} autoComplete='city' placeholder='City'/>
                     <input onChange={this.handleChangeZip} type='text' value={this.state.zip} autoComplete='zip' placeholder='Zip'/>
                     </div>
-                    <div class='right'>
+                    <div className='right'>
                     <input onChange={this.handleChangeMethod} type='radio' value={this.state.method} name='method' inputid='pickup'/>
                     <label htmlFor='pickup'>Pickup</label>
                     <input onChange={this.handleChangeMethod} type='radio' value={this.state.method} name='method' inputid='delivery'/>

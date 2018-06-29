@@ -14,11 +14,7 @@ const custReducer = (state = [], action) => {
     return state;
 };
 
-<<<<<<< HEAD
 const cartReducer = (state = {}, action) => {
-=======
-const cartReducer = (state = [], action) => {
->>>>>>> 4d9d38e5b9285a324dc84df79e2d2e70dff86e47
     if(action.type === 'ADD_ORDER') {
         console.log('in ADD_ORDER');
         
@@ -27,11 +23,7 @@ const cartReducer = (state = [], action) => {
         
     }
     return state;
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> 4d9d38e5b9285a324dc84df79e2d2e70dff86e47
 
 const storeInstance = createStore(
     combineReducers({
@@ -41,5 +33,7 @@ const storeInstance = createStore(
     applyMiddleware(logger)
 );
 
-ReactDOM.render( <Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
+// ReactDOM.render( <Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
+// registerServiceWorker();
+ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
