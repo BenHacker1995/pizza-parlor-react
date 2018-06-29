@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import './Customer.css'
 
 const mapReduxStateToProps = (reduxStore) => ({
     reduxStore
@@ -88,19 +89,34 @@ class Customer extends Component {
             <div>
                 <h3>Step 2: Customer Information</h3>
                 <form onSubmit={this.handleForm}>
-                    <div class='left'>
+                    <div className='left'>
+                    <div >
                     <input onChange={this.handleChangeName} type='text' value={this.state.name} autoComplete='name' placeholder='Name'/>
+                    </div>
+                    <div >
                     <input onChange={this.handleChangeStreet} type='text' value={this.state.street_address} autoComplete='streetAddress' placeholder='Street Address'/>
+                    </div>
+                    <div>
                     <input onChange={this.handleChangeCity} type='text' value={this.state.city} autoComplete='city' placeholder='City'/>
+                    </div>
+                    <div>
                     <input onChange={this.handleChangeZip} type='text' value={this.state.zip} autoComplete='zip' placeholder='Zip'/>
                     </div>
-                    <div class='right'>
+                    </div>
+                    
+            
+                    <div className='radio'>
+                    <div>
                     <input onChange={this.handleChangeMethod} type='radio' value={this.state.method} name='method' inputid='pickup'/>
                     <label htmlFor='pickup'>Pickup</label>
+                    </div>
+                    <div>
                     <input onChange={this.handleChangeMethod} type='radio' value={this.state.method} name='method' inputid='delivery'/>
                     <label htmlFor='delivery'>Delivery</label>
                     </div>
                     <WrappedLink />
+                    </div>
+                    
                 </form>
             </div>
         )
